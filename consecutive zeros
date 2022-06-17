@@ -15,3 +15,5 @@ def consecutive_zeros(string):
             count = 0
             
     return max_count
+    
+consecutive_zeros('10001001000100010011101101010001000001010')
