@@ -1,3 +1,5 @@
+# return the highest number of consecutive zeros in binary string
+
 def consecutive_zeros(string):
     count = 0
     max_count = 0
