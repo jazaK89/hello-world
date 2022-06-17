@@ -1,0 +1,15 @@
+def consecutive_zeros(string):
+    count = 0
+    max_count = 0
+    
+    for i in string:
+        if i == "0":
+            count += 1
+         
+        elif count > max_count:
+            max_count = count
+                
+        if i == "1":
+            count = 0
+            
+    return max_count
