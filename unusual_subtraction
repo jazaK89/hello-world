@@ -1,0 +1,16 @@
+#return n - 1 (k times)
+#if n ends with 0, remove the last 0
+
+def unusual_subtraction(n,k):
+    
+    for loops in range(0,k,1):
+        
+        if str(n)[-1] == "0":
+            n = str(n)[:-1]
+            n = int(n)
+        else:
+            n -= 1
+    
+    return n
+
+unusual_subtraction(42023110, 10)
