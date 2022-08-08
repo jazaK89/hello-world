@@ -1,0 +1,27 @@
+alph_lst = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+alph_num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+alph_dict = dict(zip(alph_lst,alph_num))
+new_lst = []
+
+def missing_letter(lst):
+    ans = 0
+    
+    for index in range( len(lst) ):
+        new_lst.append( alph_dict[ str.lower(lst[index]) ] )
+    
+    for index in range( len(new_lst)-1 ):
+        if new_lst[index] != new_lst[index+1] - 1:
+            ans += new_lst[index]+1
+
+    return alph_lst[ans-1]
+
+            
+
+        
+missing_letter(["t", "u", "v", "w", "x", "z"]) 
+        
+
+
+    
+    
+    
