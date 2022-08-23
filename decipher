@@ -1,0 +1,23 @@
+alph_lst = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+alph_num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+alph = dict(zip(alph_lst,alph_num))
+
+def digital_decipher(message, key):
+    
+    alph_key = []
+    num_key = []
+    result = ""
+    
+    while len(num_key) < len(message):
+        for index in range( len( str(key) ) ):
+            num_key.append(int(str(key)[index]))
+            
+    for index in range( len(message) ):
+        alph_key.append( message[index] - num_key[index] )
+        
+    for index in range( len(alph_key) ):
+        result += alph_lst[ alph_key[index]-1 ] 
+        
+    return result
+        
+digital_decipher([20, 12, 18, 30, 21], 1939)
