@@ -28,6 +28,6 @@ def digital_cipher(message, key):
     for index in range( len(num_message) ):
         result.append( num_message[index] + num_key[index] )
     
-    return num_key
+    return result
         
 digital_cipher("scout", 1939)
