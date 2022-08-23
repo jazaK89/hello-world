@@ -15,16 +15,19 @@ def digital_cipher(message, key):
     num_key = []
     result = []
     
+    #look up the number each letter has in the alphabet
     for index in range( len(message) ):
-        num_message.append(alph[message[index]])
+        num_message.append( alph[ message[index] ] )
 
+    #create a list of integers made from the key
     while len(num_key) < len(num_message):
         for index in range( len( str(key) ) ):
             num_key.append(int(str(key)[index]))
     
+    #create a result list of alphabet place + key index
     for index in range( len(num_message) ):
         result.append( num_message[index] + num_key[index] )
     
-    return result
+    return num_key
         
-digital_cipher("scout", 1939) ➞ [20, 12, 18, 30, 21]
+digital_cipher("scout", 1939)
