@@ -1,0 +1,22 @@
+answer = ''
+while answer != 'nej':
+    num = int( input('Ange tal att skapa multiplikationstabell:') )
+    while num ** 2 > 1000:
+        print('Försök med något lägre tal. Detta blir inte rätt format i tabellen.')
+        num = int( input('Ange tal att skapa multiplikationstabell:') )
+    else:
+        for i in range(1,num+1,1): 
+            for j in range(1,num+1,1): 
+                print(f' {j * i:3}', end='') 
+            print()
+        print()  
+        ny_tabell_svar = ''
+        while ny_tabell_svar != 'ja' or ny_tabell_svar !=  'nej':
+            ny_tabell_svar = input('Vill du skapa en ny tabell: ja/nej')
+            if ny_tabell_svar  == 'nej':
+                answer += 'nej'
+                print('Tack och hej')
+                break
+            elif ny_tabell_svar == 'ja':
+                break
+        
